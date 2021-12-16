@@ -34,6 +34,12 @@ test('Transfer tag', () => {
   expect(spanElement).toBeInTheDocument();
 });
 
+test('Balance tag', () => {
+  render(<Forum />);
+  const spanElement = screen.getByText(/Balance/i);
+  expect(spanElement).toBeInTheDocument();
+});
+
 
 
 

@@ -1,5 +1,5 @@
 import './App.css';
-import Absurd from './bulma/Absurd';
+import Absurd from './Absurd';
 
 function App() {
   return (

@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
 
+// component
+import Card from './Card';
 
-const comment = [
+
+const commentList = [
     {
-        name: "John Smith",
+        name: "Mike Smith",
         user: "@jsmith",
         comment: "This is a comment"
 
     },
     {
-        name: "John Smith",
+        name: "Steven Smith",
         user: "@jsmith",
         comment: "This is a comment"
 
     },
     {
-        name: "John Smith",
+        name: "Eric Smith",
         user: "@jsmith",
         comment: "This is a comment"
 
@@ -29,32 +32,9 @@ const comment = [
 ]
 
 
-
-const displayComment = commentList.map((c, idx) => {
+const displayCommentList = commentList.map((c, idx) => {
     return (
-        <div className="card" key={this.props.index}>
-        <div className="card-image">
-            <figure className="image is-2by1">
-                <img src="https://images.pexels.com/photos/167635/pexels-photo-167635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" />
-            </figure>
-        </div> 
-
-        <div className="card-content">
-            <div className="media">
-                <div className="media-content">
-                    <p className="title is-4">{this.props.name}</p>
-                    <p className="subtitle is-6">{this.props.user}</p>
-                </div>
-            </div>
-
-            <div className="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                <a>@bulmaio</a>.
-                <a href="#">#css</a>
-                <a href="#">#responsive</a>
-            </div>
-        </div>
-    </div>
+        <Card key={idx} index={idx} name={c.name} user={c.user} user={c.comment} />
     );
 });
 

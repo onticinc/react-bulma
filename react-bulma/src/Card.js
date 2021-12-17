@@ -38,4 +38,4 @@ class Card extends Component {
 
 }
 
-export default Article;
+export default Card;
